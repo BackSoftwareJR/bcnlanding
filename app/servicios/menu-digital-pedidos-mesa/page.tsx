@@ -43,25 +43,16 @@ const faqItems = [
 
 const exampleProjects = [
   {
-    name: "Brisa Tapas - Eixample",
-    goal: "Reducir tiempos de espera en terraza y subir venta media por mesa.",
-    result: "Mayor agilidad en hora punta y aumento visible de extras por pedido.",
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+    name: "New Flower Cafe",
+    goal: "Bar food con menu digital para agilizar pedidos y mejorar experiencia en sala.",
+    result: "Servicio mas fluido en hora punta y mejor conversion en platos y extras destacados.",
+    image: "/images/menu-cliente-new-flower-cafe.png"
   },
   {
-    name: "Fuego Burger Club - Poblenou",
-    goal: "Estandarizar pedidos en dos idiomas y minimizar errores de cocina.",
-    result: "Menos incidencias en comandas y flujo de caja mas estable en fines de semana.",
-    image:
-      "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    name: "Marina Brunch House - Barceloneta",
-    goal: "Acelerar rotacion de mesas en franja de brunch.",
-    result: "Mejor ocupacion por turno y mayor satisfaccion de cliente internacional.",
-    image:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
+    name: "Josetta Saffirio",
+    goal: "Proyecto vitivinicola para gestionar cantina, menu y adquisiciones en un flujo digital unificado.",
+    result: "Operativa mas ordenada entre producto y servicio, con mejor control de compra y venta.",
+    image: "/images/menu-cliente-josetta-saffirio.png"
   }
 ];
 
@@ -171,7 +162,7 @@ export default function MenuDigitalPedidosPage() {
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <figure className="overflow-hidden rounded-xl2 border border-slate-200 bg-white shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1000&q=80"
+              src="/images/menu-galeria-1.png"
               alt="Cliente escaneando QR en mesa de restaurante"
               width={1000}
               height={640}
@@ -181,7 +172,7 @@ export default function MenuDigitalPedidosPage() {
           </figure>
           <figure className="overflow-hidden rounded-xl2 border border-slate-200 bg-white shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80"
+              src="/images/menu-galeria-2.png"
               alt="Cocina profesional recibiendo pedidos digitales"
               width={1000}
               height={640}
@@ -191,7 +182,7 @@ export default function MenuDigitalPedidosPage() {
           </figure>
           <figure className="overflow-hidden rounded-xl2 border border-slate-200 bg-white shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1000&q=80"
+              src="/images/menu-galeria-3.png"
               alt="Pago digital en movil en restaurante"
               width={1000}
               height={640}

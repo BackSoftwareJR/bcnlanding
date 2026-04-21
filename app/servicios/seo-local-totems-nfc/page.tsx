@@ -96,7 +96,7 @@ export default function SeoLocalTotemsNfcPage() {
           </div>
           <article className="overflow-hidden rounded-xl2 border border-white/10 bg-white/10 p-4 backdrop-blur">
             <Image
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80"
+              src="/images/seo-local-totem-coherente.png"
               alt="Cliente acercando su telefono para una accion rapida de reseña"
               width={1200}
               height={800}

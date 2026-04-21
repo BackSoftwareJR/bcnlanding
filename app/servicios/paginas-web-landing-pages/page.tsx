@@ -64,28 +64,27 @@ const workProcess = [
 
 const visualExamples = [
   {
-    title: "Landing para restaurante urbano",
-    description: "Reservas y pedidos con CTA inmediata, menu destacado y prueba social para captar desde movil.",
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80"
+    title: "Sitio web escaparate para bodega vitivinicola",
+    description:
+      "Un sitio web escaparate para una bodega vitivinicola, de diseno refinado y cuidado, pensado para unir una estetica elegante con una navegacion intuitiva y envolvente.",
+    image: "/images/cliente-landing-1.png"
   },
   {
     title: "Web corporativa para servicios profesionales",
     description: "Posicionamiento de autoridad con servicios, casos y arquitectura SEO para captar clientes cualificados.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80"
+    image: "/images/cliente-landing-2.png"
   },
   {
-    title: "Landing para clinica y bienestar",
-    description: "Estructura enfocada en confianza, tratamiento destacado y contacto rapido por WhatsApp o formulario.",
-    image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80"
+    title: "Sitio web de alquiler vacacional",
+    description:
+      "Disenado para exhibir las propiedades con alto impacto visual y ofrecer un proceso de reserva fluido e intuitivo.",
+    image: "/images/cliente-landing-3.png"
   },
   {
-    title: "Web para tienda local y showroom",
-    description: "Catalogo visual, bloques de conversion y experiencia responsive para vender desde cualquier dispositivo.",
-    image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=80"
+    title: "Exclusiva landing page para Cocktail Bar & Food",
+    description:
+      "Exclusiva landing page para un concepto de Cocktail Bar & Food, vinculada directamente a una carta digital inmersiva.",
+    image: "/images/cliente-landing-4.png"
   }
 ];
 

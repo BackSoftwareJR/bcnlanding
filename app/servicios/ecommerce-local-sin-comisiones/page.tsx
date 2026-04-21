@@ -90,26 +90,22 @@ const savingsExamples = [
 const visualGallery = [
   {
     title: "Home de ecommerce orientada a conversion",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/ecommerce-inspiracion-1.png",
     alt: "Persona comprando en tienda online desde smartphone"
   },
   {
     title: "Catalogo visual para producto premium",
-    image:
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/ecommerce-inspiracion-2.png",
     alt: "Catalogo de productos en tienda de moda"
   },
   {
     title: "Checkout rapido y seguro",
-    image:
-      "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/ecommerce-inspiracion-3.png",
     alt: "Proceso de pago online en comercio digital"
   },
   {
     title: "Gestion de pedidos desde cualquier dispositivo",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/ecommerce-inspiracion-4.png",
     alt: "Panel de analitica y gestion de ecommerce"
   }
 ];
