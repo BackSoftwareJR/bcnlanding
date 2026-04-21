@@ -21,15 +21,15 @@ export function Navbar() {
           </Link>
         </div>
         <nav className="hidden gap-6 text-sm font-medium text-slate-700 md:flex">
-          <a href="/#servicios" className="hover:text-primary">
+          <Link href="/#servicios" className="hover:text-primary">
             Servicios
-          </a>
-          <a href="/#propiedad" className="hover:text-primary">
+          </Link>
+          <Link href="/#propiedad" className="hover:text-primary">
             Tu sistema, tu propiedad
-          </a>
-          <a href="/#contacto" className="hover:text-primary">
+          </Link>
+          <Link href="/#contacto" className="hover:text-primary">
             Contacto
-          </a>
+          </Link>
         </nav>
         <motion.a
           whileHover={{ scale: 1.04 }}

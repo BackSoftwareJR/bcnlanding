@@ -120,7 +120,7 @@ export default function MenuDigitalPedidosPage() {
             <h3 className="mt-2 text-2xl font-bold text-primary">Menu Digital Base</h3>
             <p className="mt-1 text-sm font-semibold text-accent">Desde 500EUR</p>
             <p className="mt-4 text-slate-600">
-              No es "pasar la carta a un QR". Es una herramienta comercial que mejora lectura, decision de compra y
+              No es &quot;pasar la carta a un QR&quot;. Es una herramienta comercial que mejora lectura, decision de compra y
               actualizacion operativa en minutos.
             </p>
             <p className="mt-3 text-slate-600">
