@@ -107,6 +107,37 @@ const workProcess = [
   }
 ];
 
+const deliverables = [
+  "Arquitectura completa de la pagina con jerarquia de mensajes orientada a conversion.",
+  "Copy comercial por bloques (hero, beneficios, objeciones, CTA) listo para vender.",
+  "Diseno responsive premium para movil, tablet y desktop con foco en velocidad real.",
+  "Integraciones de contacto (WhatsApp, formulario, email) y eventos de conversion.",
+  "Configuracion SEO base: titles, metas, estructura semantica y performance tecnica."
+];
+
+const implementationRoadmap = [
+  {
+    phase: "Fase 1",
+    title: "Briefing y diagnostico",
+    detail: "Definimos objetivo comercial, cliente ideal, oferta y propuesta de valor para alinear toda la web."
+  },
+  {
+    phase: "Fase 2",
+    title: "Estructura y mensajes",
+    detail: "Construimos wireframe y narrativa de conversion para guiar al usuario hacia una accion clara."
+  },
+  {
+    phase: "Fase 3",
+    title: "Diseno y desarrollo",
+    detail: "Implementamos el sitio en Next.js, optimizado para carga rapida y experiencia premium."
+  },
+  {
+    phase: "Fase 4",
+    title: "Publicacion y optimizacion",
+    detail: "Lanzamos, validamos conversiones y dejamos la base lista para escalar campanas y SEO."
+  }
+];
+
 const visualExamples = [
   {
     title: "Bodega vitivinicola",
@@ -475,6 +506,61 @@ export default function WebLandingPage() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Deliverables Section */}
+      <section className="section-padding bg-surface">
+        <div className="container-width">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="badge badge-primary mb-4">Que recibes exactamente</span>
+            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              Entregables concretos del servicio
+            </h2>
+            <p className="mt-4 max-w-3xl text-lg text-primary-500">
+              Sin ambiguedades ni tecnicismos vacios: esto es lo que se construye para tu negocio.
+            </p>
+          </motion.div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {deliverables.map((item) => (
+              <article key={item} className="card">
+                <p className="text-primary-700">{item}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="section-padding bg-white">
+        <div className="container-width">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="badge badge-emerald mb-4">Implementacion</span>
+            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              Roadmap de trabajo paso a paso
+            </h2>
+          </motion.div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {implementationRoadmap.map((step) => (
+              <article key={step.title} className="card card-hover">
+                <p className="text-sm font-semibold uppercase tracking-wide text-accent">{step.phase}</p>
+                <h3 className="mt-2 text-lg font-semibold text-primary">{step.title}</h3>
+                <p className="mt-2 text-primary-600">{step.detail}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -70,6 +70,41 @@ const sectors = [
   "Tiendas locales y negocios de proximidad que necesitan mas visibilidad en Maps"
 ];
 
+const implementationRoadmap = [
+  {
+    step: "Semana 1",
+    title: "Auditoria local y setup tecnico",
+    description:
+      "Analizamos categoria, competencia, areas de servicio y estado actual de tu ficha para priorizar acciones de mayor impacto."
+  },
+  {
+    step: "Semana 2",
+    title: "Optimización de perfil y contenido",
+    description:
+      "Reescribimos servicios, descripcion, atributos y estructura de publicaciones con foco en busqueda local transaccional."
+  },
+  {
+    step: "Semana 3",
+    title: "Activacion Totem NFC y guion de equipo",
+    description:
+      "Implementamos flujo de reseñas en punto de venta y entrenamos al equipo para pedir feedback en el mejor momento."
+  },
+  {
+    step: "Semana 4+",
+    title: "Monitoreo y mejora continua",
+    description:
+      "Seguimos posiciones, ratio de reseñas y conversion local para mantener crecimiento sostenido de visibilidad."
+  }
+];
+
+const expectedOutcomes = [
+  "Mas apariciones en Google Maps para busquedas de intencion local",
+  "Aumento progresivo de reseñas y mejora de reputacion promedio",
+  "Mayor confianza previa a la visita gracias a perfil y pruebas sociales",
+  "Incremento de llamadas, rutas y contactos desde la ficha",
+  "Base digital preparada para competir en zonas de alta demanda"
+];
+
 export default function SeoLocalTotemsNfcPage() {
   return (
     <main className="bg-gradient-to-b from-surface via-white to-slate-50">
@@ -234,6 +269,40 @@ export default function SeoLocalTotemsNfcPage() {
               <p key={sector} className="flex items-start gap-2 text-sm text-emerald-900">
                 <Waves size={16} className="mt-0.5 shrink-0" />
                 {sector}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-16">
+        <h2 className="text-3xl font-bold text-primary">Roadmap de implementacion por fases</h2>
+        <p className="mt-3 max-w-3xl text-slate-600">
+          No se trata solo de &quot;poner un totem&quot;: definimos un proceso comercial medible para convertir experiencia de
+          cliente en reputacion y visibilidad local real.
+        </p>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {implementationRoadmap.map((phase) => (
+            <article key={phase.step} className="rounded-xl2 border border-slate-200 bg-white p-6 shadow-soft">
+              <p className="text-xs font-semibold uppercase tracking-wide text-accent">{phase.step}</p>
+              <h3 className="mt-2 text-lg font-semibold text-primary">{phase.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{phase.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-16">
+        <div className="rounded-xl2 border border-slate-200 bg-white p-6 shadow-soft md:p-8">
+          <h2 className="text-3xl font-bold text-primary">Resultados esperados en negocio</h2>
+          <p className="mt-3 max-w-3xl text-slate-600">
+            Este bloque ayuda a aterrizar la propuesta en objetivos visibles para gerencia, recepcion y equipo comercial.
+          </p>
+          <div className="mt-6 grid gap-3 md:grid-cols-2">
+            {expectedOutcomes.map((outcome) => (
+              <p key={outcome} className="flex items-start gap-2 text-sm text-slate-700">
+                <BadgeCheck size={16} className="mt-0.5 shrink-0 text-emerald-600" />
+                {outcome}
               </p>
             ))}
           </div>

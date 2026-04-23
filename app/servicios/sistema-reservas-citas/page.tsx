@@ -107,6 +107,36 @@ const visualExamples = [
   }
 ];
 
+const implementationRoadmap = [
+  {
+    title: "Kickoff y mapeo operativo",
+    description:
+      "Definimos servicios, tiempos por bloque, politicas de cancelacion y reglas de aprobacion para construir una agenda realista."
+  },
+  {
+    title: "Configuracion de flujos",
+    description:
+      "Activamos reservas, recordatorios, depositos y sincronizacion de calendario segun las necesidades de tu negocio."
+  },
+  {
+    title: "Pruebas con casos reales",
+    description:
+      "Probamos la experiencia de cliente y operativa interna con escenarios de hora punta, cambios y reprogramaciones."
+  },
+  {
+    title: "Lanzamiento asistido",
+    description:
+      "Publicamos el sistema y acompanamos los primeros dias para ajustar textos, disponibilidad y conversion."
+  }
+];
+
+const expectedOutcomes = [
+  "Reduccion de interrupciones en recepcion y WhatsApp durante la jornada",
+  "Menos no-shows gracias a recordatorios y politica de deposito",
+  "Mayor ocupacion real de agenda con huecos mejor aprovechados",
+  "Mejor experiencia para cliente final y equipo interno"
+];
+
 export default function SistemaReservasCitasPage() {
   return (
     <main className="bg-gradient-to-b from-surface via-white to-slate-50">
@@ -317,6 +347,35 @@ export default function SistemaReservasCitasPage() {
               <p className="mt-3 rounded-lg bg-slate-50 p-3 text-sm text-slate-700">{item.benefit}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-16">
+        <h2 className="text-3xl font-bold text-primary">Roadmap de implementacion</h2>
+        <p className="mt-3 max-w-3xl text-slate-600">
+          Plan de trabajo claro para pasar de agenda manual a sistema profesional sin frenar la operativa diaria.
+        </p>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {implementationRoadmap.map((item) => (
+            <article key={item.title} className="rounded-xl2 border border-slate-200 bg-white p-6 shadow-soft">
+              <h3 className="text-lg font-semibold text-primary">{item.title}</h3>
+              <p className="mt-2 text-slate-600">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-16">
+        <div className="rounded-xl2 border border-slate-200 bg-white p-6 shadow-soft md:p-8">
+          <h2 className="text-3xl font-bold text-primary">Resultados esperados tras implementacion</h2>
+          <div className="mt-6 grid gap-3 md:grid-cols-2">
+            {expectedOutcomes.map((item) => (
+              <p key={item} className="flex items-start gap-2 text-sm text-slate-700">
+                <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-600" />
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 

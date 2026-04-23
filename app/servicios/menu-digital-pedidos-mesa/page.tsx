@@ -23,6 +23,36 @@ const plusFeatures = [
   "Menor tiempo muerto en sala y mayor rotacion de mesas en servicios de alta demanda."
 ];
 
+const implementationRoadmap = [
+  {
+    phase: "Fase 1 - Diagnostico operativo",
+    detail:
+      "Mapeamos recorrido real de sala, cocina y caja para detectar cuellos de botella en comandas, tiempos y errores."
+  },
+  {
+    phase: "Fase 2 - Diseno de carta y flujo",
+    detail:
+      "Estructuramos categorias, extras, alergenos y reglas de venta sugerida para maximizar ticket medio sin friccion."
+  },
+  {
+    phase: "Fase 3 - Implementacion tecnica",
+    detail:
+      "Configuramos menu digital, auto-pedido y panel de gestion conectado con tu operativa diaria."
+  },
+  {
+    phase: "Fase 4 - Lanzamiento y optimizacion",
+    detail:
+      "Activamos en local y refinamos segun datos reales de venta, tiempos de servicio y comportamiento de clientes."
+  }
+];
+
+const expectedOutcomes = [
+  "Mas pedidos por mesa gracias a sugerencias de extras y combinaciones.",
+  "Reduccion de errores de comanda por eliminar pasos manuales repetitivos.",
+  "Mayor velocidad de servicio en hora punta sin aumentar plantilla.",
+  "Experiencia mas fluida para cliente local e internacional."
+];
+
 const faqItems = [
   {
     question: "Mis clientes prefieren hablar con un camarero, no con el movil.",
@@ -151,6 +181,33 @@ export default function MenuDigitalPedidosPage() {
               Pitch vendedor: cuesta menos que un mes de personal adicional y trabaja 24/7 vendiendo extras en cada pedido.
             </div>
           </article>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-16">
+        <h2 className="text-3xl font-bold text-primary">Roadmap de implementacion en tu local</h2>
+        <p className="mt-3 max-w-3xl text-slate-600">
+          No instalamos tecnologia a ciegas: seguimos un proceso comercial y operativo para que el sistema encaje con tu
+          realidad diaria.
+        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {implementationRoadmap.map((item) => (
+            <article key={item.phase} className="rounded-xl2 border border-slate-200 bg-white p-5 shadow-soft">
+              <h3 className="font-semibold text-primary">{item.phase}</h3>
+              <p className="mt-2 text-slate-600">{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-16">
+        <h2 className="text-3xl font-bold text-primary">Resultados esperados tras la implantacion</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {expectedOutcomes.map((item) => (
+            <article key={item} className="rounded-xl2 border border-emerald-200 bg-emerald-50 p-5 shadow-soft">
+              <p className="text-emerald-900">{item}</p>
+            </article>
+          ))}
         </div>
       </section>
 

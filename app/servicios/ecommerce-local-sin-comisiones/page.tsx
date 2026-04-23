@@ -110,6 +110,36 @@ const visualGallery = [
   }
 ];
 
+const implementationRoadmap = [
+  {
+    phase: "Semana 1",
+    title: "Arquitectura y estrategia comercial",
+    text: "Definimos catalogo, estructura de categorias, metodos de pago, logistica y jerarquia de conversion."
+  },
+  {
+    phase: "Semana 2",
+    title: "Diseno de interfaz y experiencia de compra",
+    text: "Creamos vistas de home, colecciones, ficha de producto y checkout con enfoque mobile-first."
+  },
+  {
+    phase: "Semana 3",
+    title: "Desarrollo tecnico e integraciones",
+    text: "Implementamos pagos, reglas de envio, panel de gestion, analitica y automatizaciones esenciales."
+  },
+  {
+    phase: "Semana 4",
+    title: "Lanzamiento y optimizacion inicial",
+    text: "Publicamos la tienda, verificamos conversion y dejamos ajustes listos para escalar campanas."
+  }
+];
+
+const expectedOutcomes = [
+  "Incremento progresivo del margen neto al eliminar comisiones por venta.",
+  "Mayor tasa de conversion por velocidad de carga y UX orientada a compra.",
+  "Control total de promociones, datos y estrategia sin bloqueos de plataforma.",
+  "Base preparada para SEO y crecimiento sostenido del catalogo."
+];
+
 export default function EcommerceLocalSinComisionesPage() {
   return (
     <main className="bg-gradient-to-b from-surface via-white to-slate-50">
@@ -294,6 +324,36 @@ export default function EcommerceLocalSinComisionesPage() {
                 Visualizacion limpia en escritorio para branding, SEO y conversion en sesiones largas.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-16">
+        <h2 className="text-3xl font-bold text-primary">Roadmap de implementacion del ecommerce</h2>
+        <p className="mt-3 max-w-3xl text-slate-600">
+          Plan de trabajo para que el cliente entienda exactamente como pasamos de idea a tienda vendiendo.
+        </p>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {implementationRoadmap.map((item) => (
+            <article key={item.phase} className="rounded-xl2 border border-slate-200 bg-white p-6 shadow-soft">
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent">{item.phase}</p>
+              <h3 className="mt-2 text-lg font-semibold text-primary">{item.title}</h3>
+              <p className="mt-2 text-slate-600">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-16">
+        <div className="rounded-xl2 border border-emerald-200 bg-emerald-50 p-6 md:p-8">
+          <h2 className="text-3xl font-bold text-emerald-900">Resultados esperados del proyecto</h2>
+          <div className="mt-6 grid gap-3 md:grid-cols-2">
+            {expectedOutcomes.map((item) => (
+              <p key={item} className="flex items-start gap-2 text-sm text-emerald-900">
+                <ShieldCheck size={16} className="mt-0.5 shrink-0" />
+                {item}
+              </p>
+            ))}
           </div>
         </div>
       </section>
