@@ -8,7 +8,6 @@ import {
   Zap, 
   Shield, 
   TrendingUp, 
-  Star,
   ArrowRight,
   Users,
   Award,
@@ -57,27 +56,6 @@ const benefits = [
     title: "Soporte local en Barcelona",
     description: "Equipo cercano que entiende el mercado local y tus necesidades reales.",
     icon: Users
-  }
-];
-
-const testimonials = [
-  {
-    quote: "En dos semanas teniamos el sistema de reservas funcionando. Ahora gestionamos 3x mas citas sin aumentar personal.",
-    author: "Maria Garcia",
-    role: "Centro de Estetica en Gracia",
-    rating: 5
-  },
-  {
-    quote: "La landing nos trajo un 40% mas de contactos cualificados. La diferencia con nuestra web anterior es abismal.",
-    author: "Pere Soler",
-    role: "Despacho de Abogados en Eixample",
-    rating: 5
-  },
-  {
-    quote: "El menu digital redujo errores de comanda y aumento el ticket medio. Los clientes lo usan encantados.",
-    author: "Carlos Fernandez",
-    role: "Restaurante en Born",
-    rating: 5
   }
 ];
 
@@ -325,54 +303,6 @@ export default function HomePage() {
             {services.map((service) => (
               <motion.div key={service.slug} variants={fadeInUp}>
                 <ServiceCard service={service} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Social Proof / Testimonials */}
-      <section className="section-padding bg-[#071126]">
-        <div className="container-width">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <span className="badge mb-4 border border-white/20 bg-white/10 text-white">
-              <Star className="h-3 w-3 text-accent-400" />
-              Lo que dicen nuestros clientes
-            </span>
-            <h2 className="section-title text-white">
-              Resultados reales de negocios locales
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="mt-12 grid gap-6 md:grid-cols-3"
-          >
-            {testimonials.map((testimonial) => (
-              <motion.div
-                key={testimonial.author}
-                variants={fadeInUp}
-                className="rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl"
-              >
-                <div className="mb-4 flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-accent-400 text-accent-400" />
-                  ))}
-                </div>
-                <p className="leading-relaxed text-blue-100/90">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div className="mt-6 border-t border-white/10 pt-4">
-                  <p className="font-semibold text-white">{testimonial.author}</p>
-                  <p className="text-sm text-primary-400">{testimonial.role}</p>
-                </div>
               </motion.div>
             ))}
           </motion.div>
