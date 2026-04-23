@@ -26,9 +26,9 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "glass border-b border-primary-200/50 shadow-soft"
+            ? "glass border-b border-white/70 shadow-soft"
             : "bg-transparent"
         }`}
       >
@@ -36,11 +36,11 @@ export function Navbar() {
           <div className="flex items-center justify-between px-6 py-4">
             {/* Logo */}
             <Link href="/" className="group flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 shadow-soft">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/60 bg-gradient-to-br from-[#1d4ed8] to-[#3b82f6] shadow-soft">
                 <Zap className="h-5 w-5 text-white" />
               </div>
               <span className={`text-lg font-bold transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
-                BCN <span className="text-accent">Digital</span>
+                BCN <span className="text-blue-300">Digital</span>
               </span>
             </Link>
 
@@ -50,10 +50,10 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                     scrolled
-                      ? "text-primary-600 hover:bg-primary-100 hover:text-primary"
-                      : "text-white/80 hover:bg-white/10 hover:text-white"
+                      ? "text-primary-700 hover:bg-white/80 hover:text-primary"
+                      : "text-white/85 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   {link.label}
@@ -67,7 +67,7 @@ export function Navbar() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href="https://wa.me/393513052627"
-                className="hidden items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:bg-accent-600 hover:shadow-glow-accent sm:inline-flex"
+                className="hidden items-center gap-2 rounded-full border border-white/30 bg-gradient-to-r from-[#1d4ed8] to-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:brightness-110 sm:inline-flex"
               >
                 Hablar ahora
                 <ArrowRight className="h-4 w-4" />
@@ -109,7 +109,7 @@ export function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed bottom-0 right-0 top-0 z-50 w-full max-w-sm bg-white shadow-soft-xl md:hidden"
+              className="fixed bottom-0 right-0 top-0 z-50 w-full max-w-sm border-l border-white/70 bg-white/90 shadow-soft-xl backdrop-blur-2xl md:hidden"
             >
               <div className="flex h-full flex-col">
                 {/* Header */}

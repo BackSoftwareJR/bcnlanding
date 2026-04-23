@@ -6,8 +6,10 @@
 
 :root {
   color-scheme: light;
-  --accent: #F97316;
-  --primary: #0F172A;
+  --accent: #4f7cff;
+  --primary: #020617;
+  --bg-soft: #f5f7fb;
+  --glass-border: rgba(255, 255, 255, 0.5);
 }
 
 html {
@@ -30,18 +32,26 @@ body {
 }
 
 @layer base {
+  html {
+    @apply bg-[#f4f6fb];
+  }
+
   body {
-    @apply font-sans antialiased;
+    @apply min-h-screen font-sans antialiased text-primary;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(79, 124, 255, 0.12) 0%, transparent 42%),
+      radial-gradient(circle at 90% 0%, rgba(56, 189, 248, 0.1) 0%, transparent 36%),
+      linear-gradient(180deg, #f9fbff 0%, #eef2f8 100%);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-soft transition-all duration-300 hover:bg-accent-600 hover:shadow-glow-accent hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-gradient-to-r from-[#1d4ed8] via-[#2563eb] to-[#3b82f6] px-6 py-3.5 text-sm font-semibold text-white shadow-soft-lg transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary-200 bg-white px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary-300 hover:bg-primary-50 hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-primary-200/80 bg-white/75 px-6 py-3.5 text-sm font-semibold text-primary backdrop-blur-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-white;
   }
   
   .btn-ghost {
@@ -49,7 +59,7 @@ body {
   }
 
   .card {
-    @apply rounded-2xl border border-primary-200/60 bg-white p-6 shadow-soft transition-all duration-300;
+    @apply rounded-3xl border border-white/70 bg-white/70 p-6 shadow-soft backdrop-blur-lg transition-all duration-300;
   }
   
   .card-hover {
@@ -57,7 +67,7 @@ body {
   }
 
   .card-accent {
-    @apply rounded-2xl border border-accent-200 bg-gradient-to-br from-accent-50 to-white p-6 shadow-soft;
+    @apply rounded-3xl border border-white/70 bg-gradient-to-br from-[#edf3ff] via-white to-[#f3fbff] p-6 shadow-soft backdrop-blur-lg;
   }
 
   .section-padding {
@@ -69,7 +79,7 @@ body {
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-accent-500 via-accent-600 to-accent-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#0f172a] via-[#2563eb] to-[#0ea5e9] bg-clip-text text-transparent;
   }
 
   .text-gradient-primary {
@@ -81,7 +91,7 @@ body {
   }
 
   .badge-accent {
-    @apply bg-accent-100 text-accent-700;
+    @apply border border-blue-200 bg-blue-100/70 text-blue-700 backdrop-blur-lg;
   }
 
   .badge-emerald {
@@ -89,7 +99,7 @@ body {
   }
 
   .badge-primary {
-    @apply bg-primary-100 text-primary-700;
+    @apply border border-slate-200 bg-slate-100/70 text-slate-700 backdrop-blur-lg;
   }
 
   .input-field {
@@ -97,11 +107,23 @@ body {
   }
 
   .glass {
-    @apply bg-white/80 backdrop-blur-xl;
+    @apply border border-white/60 bg-white/55 backdrop-blur-xl;
   }
 
   .glass-dark {
-    @apply bg-primary-900/80 backdrop-blur-xl;
+    @apply border border-white/15 bg-slate-950/55 backdrop-blur-xl;
+  }
+
+  .glass-panel {
+    @apply rounded-3xl border border-white/70 bg-white/65 shadow-soft backdrop-blur-2xl;
+  }
+
+  .glass-panel-dark {
+    @apply rounded-3xl border border-white/15 bg-slate-900/55 text-white shadow-soft-lg backdrop-blur-2xl;
+  }
+
+  .section-title {
+    @apply text-balance text-3xl font-semibold tracking-tight text-primary md:text-4xl lg:text-5xl;
   }
 }
 

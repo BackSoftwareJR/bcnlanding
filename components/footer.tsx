@@ -29,9 +29,13 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-primary-900 text-white">
+    <footer className="relative overflow-hidden bg-[#071126] text-white">
+      <div className="pointer-events-none absolute inset-0 opacity-70">
+        <div className="absolute -left-40 top-0 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-cyan-400/15 blur-3xl" />
+      </div>
       {/* Main Footer */}
-      <div className="container-width px-6 py-16">
+      <div className="container-width relative px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand & Description */}
           <div className="lg:col-span-1">
@@ -49,7 +53,7 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg bg-white/10 p-2.5 text-primary-300 transition-colors hover:bg-white/20 hover:text-white"
+                className="rounded-xl border border-white/20 bg-white/10 p-2.5 text-primary-300 backdrop-blur-lg transition-colors hover:bg-white/20 hover:text-white"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -57,7 +61,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg bg-white/10 p-2.5 text-primary-300 transition-colors hover:bg-white/20 hover:text-white"
+                className="rounded-xl border border-white/20 bg-white/10 p-2.5 text-primary-300 backdrop-blur-lg transition-colors hover:bg-white/20 hover:text-white"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -143,7 +147,7 @@ export function Footer() {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-12 rounded-2xl bg-gradient-to-r from-accent-600 to-accent-500 p-6 md:p-8">
+        <div className="mt-12 rounded-3xl border border-white/20 bg-gradient-to-r from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9] p-6 shadow-soft-xl md:p-8">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div>
               <h3 className="text-xl font-bold text-white md:text-2xl">
@@ -157,7 +161,7 @@ export function Footer() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="https://wa.me/393513052627"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-accent-600 shadow-lg transition-shadow hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/90 px-6 py-3 text-sm font-semibold text-blue-700 shadow-lg backdrop-blur transition-shadow hover:shadow-xl"
             >
               Contactar ahora
               <ArrowRight className="h-4 w-4" />

@@ -104,9 +104,11 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
-        <div className="absolute inset-0 bg-hero-pattern opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+      <section className="relative min-h-[92vh] overflow-hidden bg-[#030b1f]">
+        <div className="absolute inset-0 bg-hero-pattern opacity-30" />
+        <div className="absolute -left-32 -top-40 h-[420px] w-[420px] rounded-full bg-blue-500/35 blur-3xl" />
+        <div className="absolute -right-24 top-24 h-[320px] w-[320px] rounded-full bg-cyan-400/25 blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-[#030b1f]" />
         
         <div className="container-width relative px-6 pb-20 pt-24 md:pb-32 md:pt-32">
           <motion.div
@@ -115,7 +117,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <span className="badge badge-accent">
+            <span className="badge border border-white/25 bg-white/10 text-blue-100 backdrop-blur-lg">
               <Zap className="h-3 w-3" />
               Digitalizacion para PYMES de Barcelona
             </span>
@@ -125,10 +127,10 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight text-white md:text-6xl lg:text-7xl"
+            className="max-w-4xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl"
           >
             Digitalizamos tu negocio local.{" "}
-            <span className="text-gradient bg-gradient-to-r from-accent-400 to-accent-500">
+            <span className="bg-gradient-to-r from-blue-300 via-cyan-300 to-white bg-clip-text text-transparent">
               Empieza a vender mas hoy.
             </span>
           </motion.h1>
@@ -137,7 +139,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-200 md:text-xl"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-blue-100/90 md:text-xl"
           >
             Implementamos sistemas digitales listos para facturar desde la primera semana, 
             sin depender de plataformas que te quitan margen.
@@ -153,7 +155,7 @@ export default function HomePage() {
               Solicitar diagnostico express
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="#servicios" className="btn-secondary border-white/20 bg-white/10 text-white hover:bg-white/20">
+            <a href="#servicios" className="btn-secondary border-white/30 bg-white/10 text-white hover:bg-white/20">
               Ver servicios
             </a>
           </motion.div>
@@ -170,13 +172,13 @@ export default function HomePage() {
               return (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+                  className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur-xl"
                 >
                   <div className="flex items-center gap-2">
-                    <Icon className="h-5 w-5 text-accent-400" />
+                    <Icon className="h-5 w-5 text-blue-300" />
                     <span className="text-2xl font-bold text-white md:text-3xl">{stat.value}</span>
                   </div>
-                  <p className="mt-1 text-sm text-primary-300">{stat.label}</p>
+                  <p className="mt-1 text-sm text-blue-100/80">{stat.label}</p>
                 </div>
               );
             })}
@@ -193,7 +195,7 @@ export default function HomePage() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 text-primary-400"
+            className="flex flex-col items-center gap-2 text-blue-200/70"
           >
             <span className="text-xs font-medium">Descubre mas</span>
             <ChevronDown className="h-5 w-5" />
@@ -202,14 +204,14 @@ export default function HomePage() {
       </section>
 
       {/* Value Proposition */}
-      <section id="propiedad" className="scroll-mt-24 section-padding bg-surface">
+      <section id="propiedad" className="scroll-mt-24 section-padding bg-transparent">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-3xl border border-accent-200/50 bg-gradient-to-br from-accent-50 via-white to-emerald-50/30 p-8 shadow-soft-lg md:p-12"
+            className="glass-panel p-8 md:p-12"
           >
             <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-2xl">
@@ -217,7 +219,7 @@ export default function HomePage() {
                   <Shield className="h-3 w-3" />
                   Diferenciador clave
                 </span>
-                <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl lg:text-5xl">
+                <h2 className="section-title">
                   Tu sistema, tu propiedad
                 </h2>
                 <p className="mt-4 text-lg leading-relaxed text-primary-600">
@@ -226,15 +228,15 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3 rounded-xl bg-white p-4 shadow-soft">
+                <div className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-soft backdrop-blur-lg">
                   <CheckCircle2 className="h-5 w-5 text-emerald-500" />
                   <span className="font-medium text-primary">Codigo 100% tuyo</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white p-4 shadow-soft">
+                <div className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-soft backdrop-blur-lg">
                   <CheckCircle2 className="h-5 w-5 text-emerald-500" />
                   <span className="font-medium text-primary">0€ cuotas mensuales</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-xl bg-white p-4 shadow-soft">
+                <div className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-soft backdrop-blur-lg">
                   <CheckCircle2 className="h-5 w-5 text-emerald-500" />
                   <span className="font-medium text-primary">Sin comisiones por venta</span>
                 </div>
@@ -245,7 +247,7 @@ export default function HomePage() {
       </section>
 
       {/* Benefits Grid */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-transparent">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -257,7 +259,7 @@ export default function HomePage() {
             <span className="badge badge-primary mb-4">
               Por que elegirnos
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+            <h2 className="section-title">
               Ventajas que marcan la diferencia
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-500">
@@ -293,7 +295,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="servicios" className="scroll-mt-24 section-padding bg-surface">
+      <section id="servicios" className="scroll-mt-24 section-padding bg-transparent">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -304,7 +306,7 @@ export default function HomePage() {
             <span className="badge badge-accent mb-4">
               Soluciones probadas
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+            <h2 className="section-title">
               Servicios para crecer en tu zona
             </h2>
             <p className="mt-4 max-w-2xl text-lg text-primary-500">
@@ -330,7 +332,7 @@ export default function HomePage() {
       </section>
 
       {/* Social Proof / Testimonials */}
-      <section className="section-padding bg-primary-900">
+      <section className="section-padding bg-[#071126]">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -339,11 +341,11 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <span className="badge bg-white/10 text-white mb-4">
+            <span className="badge mb-4 border border-white/20 bg-white/10 text-white">
               <Star className="h-3 w-3 text-accent-400" />
               Lo que dicen nuestros clientes
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+            <h2 className="section-title text-white">
               Resultados reales de negocios locales
             </h2>
           </motion.div>
@@ -359,14 +361,14 @@ export default function HomePage() {
               <motion.div
                 key={testimonial.author}
                 variants={fadeInUp}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                className="rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl"
               >
                 <div className="mb-4 flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-accent-400 text-accent-400" />
                   ))}
                 </div>
-                <p className="text-primary-200 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="leading-relaxed text-blue-100/90">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="mt-6 border-t border-white/10 pt-4">
                   <p className="font-semibold text-white">{testimonial.author}</p>
                   <p className="text-sm text-primary-400">{testimonial.role}</p>
@@ -378,7 +380,7 @@ export default function HomePage() {
       </section>
 
       {/* Process Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-transparent">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -391,7 +393,7 @@ export default function HomePage() {
               <Clock className="h-3 w-3" />
               Proceso simple
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+            <h2 className="section-title">
               Como trabajamos contigo
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-500">
@@ -417,7 +419,7 @@ export default function HomePage() {
                 variants={fadeInUp}
                 className="relative"
               >
-                <div className="rounded-2xl border border-primary-100 bg-primary-50/50 p-6">
+                <div className="rounded-3xl border border-white/70 bg-white/75 p-6 shadow-soft backdrop-blur-lg">
                   <span className="text-4xl font-bold text-accent-500/20">{item.step}</span>
                   <h3 className="mt-2 text-lg font-semibold text-primary">{item.title}</h3>
                   <p className="mt-2 text-sm text-primary-500">{item.desc}</p>
@@ -434,7 +436,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding bg-surface">
+      <section className="section-padding bg-transparent">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -446,7 +448,7 @@ export default function HomePage() {
             <span className="badge badge-primary mb-4">
               Preguntas frecuentes
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+            <h2 className="section-title">
               Resolvemos tus dudas
             </h2>
           </motion.div>
@@ -462,7 +464,7 @@ export default function HomePage() {
               <motion.details
                 key={item.question}
                 variants={fadeInUp}
-                className="group card cursor-pointer"
+                className="group card cursor-pointer rounded-3xl"
               >
                 <summary className="flex items-center justify-between font-semibold text-primary list-none">
                   {item.question}
@@ -476,7 +478,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section id="contacto" className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
+      <section id="contacto" className="section-padding bg-[#030b1f]">
         <div className="container-width">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -485,10 +487,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
               Listo para digitalizar tu negocio?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-200">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100/90">
               Agenda una llamada de 15 minutos. Te explicamos como podemos ayudarte 
               sin compromiso ni presion.
             </p>
@@ -497,8 +499,8 @@ export default function HomePage() {
                 Hablar por WhatsApp
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <span className="text-primary-400">o</span>
-              <a href="mailto:info@bcndigitallocal.com" className="text-white underline underline-offset-4 hover:text-accent-400">
+              <span className="text-blue-200/70">o</span>
+              <a href="mailto:info@bcndigitallocal.com" className="text-white underline underline-offset-4 hover:text-blue-300">
                 Escribenos un email
               </a>
             </div>

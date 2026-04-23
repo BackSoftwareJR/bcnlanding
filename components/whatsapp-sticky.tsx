@@ -34,10 +34,10 @@ export function WhatsAppSticky() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="absolute bottom-20 right-0 w-72 overflow-hidden rounded-2xl bg-white shadow-soft-xl"
+                className="absolute bottom-20 right-0 w-72 overflow-hidden rounded-3xl border border-white/70 bg-white/80 shadow-soft-xl backdrop-blur-2xl"
               >
                 {/* Header */}
-                <div className="bg-emerald-500 p-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-emerald-400 p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
@@ -58,7 +58,7 @@ export function WhatsAppSticky() {
                 </div>
 
                 {/* Messages */}
-                <div className="bg-[#E5DDD5] p-4">
+                <div className="bg-gradient-to-br from-emerald-50 to-white p-4">
                   <div className="space-y-2">
                     {messages.map((message, index) => (
                       <motion.div
@@ -66,7 +66,7 @@ export function WhatsAppSticky() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.15 }}
-                        className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-3 py-2 text-sm text-primary shadow-sm"
+                        className="max-w-[85%] rounded-2xl rounded-tl-sm border border-emerald-100 bg-white px-3 py-2 text-sm text-primary shadow-sm"
                       >
                         {message}
                       </motion.div>
@@ -75,7 +75,7 @@ export function WhatsAppSticky() {
                 </div>
 
                 {/* CTA */}
-                <div className="border-t border-primary-100 p-4">
+                <div className="border-t border-primary-100/80 bg-white/70 p-4">
                   <a
                     href="https://wa.me/393513052627"
                     target="_blank"
@@ -98,7 +98,7 @@ export function WhatsAppSticky() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsExpanded(!isExpanded)}
-            className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 text-white shadow-soft-lg transition-all hover:bg-emerald-600 hover:shadow-glow-emerald"
+            className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/30 bg-gradient-to-br from-emerald-500 to-emerald-400 text-white shadow-soft-lg transition-all hover:bg-emerald-600 hover:shadow-glow-emerald"
           >
             <AnimatePresence mode="wait">
               {isExpanded ? (
@@ -136,7 +136,7 @@ export function WhatsAppSticky() {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="absolute bottom-4 right-full mr-3 hidden whitespace-nowrap rounded-lg bg-primary-900 px-3 py-2 text-xs font-medium text-white shadow-soft lg:block"
+              className="absolute bottom-4 right-full mr-3 hidden whitespace-nowrap rounded-xl border border-white/20 bg-primary-900/90 px-3 py-2 text-xs font-medium text-white shadow-soft backdrop-blur-md lg:block"
             >
               Necesitas ayuda?
               <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 border-4 border-transparent border-l-primary-900" />

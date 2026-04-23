@@ -56,10 +56,11 @@ export function ServiceCard({ service }: Props) {
     >
       <Link
         href={`/servicios/${service.slug}`}
-        className={`group relative block h-full overflow-hidden rounded-2xl border border-primary-200/60 bg-white p-6 shadow-soft transition-all duration-300 ${colors.border} hover:shadow-soft-lg`}
+        className={`group relative block h-full overflow-hidden rounded-3xl border border-white/70 bg-white/70 p-6 shadow-soft backdrop-blur-xl transition-all duration-300 ${colors.border} hover:shadow-soft-lg`}
       >
         {/* Background gradient on hover */}
         <div className={`absolute inset-0 ${colors.bg} opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
+        <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/90 to-transparent" />
         
         {/* Content */}
         <div className="relative">
@@ -69,7 +70,7 @@ export function ServiceCard({ service }: Props) {
           </div>
 
           {/* Title */}
-          <h3 className="mb-2 text-lg font-semibold text-primary transition-colors group-hover:text-primary-800">
+          <h3 className="mb-2 text-lg font-semibold tracking-tight text-primary transition-colors group-hover:text-primary-800">
             {service.title}
           </h3>
 
@@ -79,7 +80,7 @@ export function ServiceCard({ service }: Props) {
           </p>
 
           {/* CTA */}
-          <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-accent transition-colors group-hover:text-accent-600">
+          <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-700">
             Ver detalles
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </div>
