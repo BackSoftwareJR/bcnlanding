@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { WhatsAppSticky } from "@/components/whatsapp-sticky";
+import { ChunkErrorReloader } from "@/components/chunk-error-reloader";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -83,6 +84,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="bg-surface text-primary antialiased">
+        <ChunkErrorReloader />
         <Navbar />
         {children}
         <Footer />
